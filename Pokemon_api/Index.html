@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Referencial al archivo de estilos-->
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Pokémon</title>
+</head>
+<body>
+  <h1>Pokémon API</h1>
+
+  <div id="app">
+    <!--Selec de busqueda-->
+    <label>
+      Buscar por:
+      <select id="searchBy">
+        <option value="random">ID Aleatorio</option>
+        <option value="id">ID</option>
+        <option value="name">Nombre</option>
+      </select>  
+    </label>
+    <!--Caja para busqueda ID o Nombre-->
+    <input type="text" id="searchInput" placeholder="Ingrese ID o Nombre">
+
+    <!--Boton de busqueda-->
+    <button onclick="cargar()">Buscar</button>
+    
+    <!--Contenedor de infomacion-->
+    <div id="pokemonInfo"></div>
+
+    <!--Modal para más informacion-->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!--Botones para generar más informacion-->
+    <button onclick="showMoreInfo()">Más Información</button>
+
+    <!-- Tabla para añadir Pokémon -->
+    <h2>Pokémons Añadidos</h2>
+    <table id="pokemonTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th>Altura</th>
+                <th>Habilidades</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>   
+  </div>
+  <!--Referencia al archivo JS-->
+  <script src="js/index.js"></script>
+</body>
+</html>
